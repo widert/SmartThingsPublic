@@ -1,0 +1,11 @@
+#!/bin/bash
+# VNC xstartup script
+
+# Start a window manager
+twm &
+
+# Start a terminal
+xterm -geometry 80x24+10+10 -ls -title "VNC Terminal" &
+
+# Keep the session alive
+exec xterm -geometry 80x24+400+10 -ls -title "Main Terminal"
